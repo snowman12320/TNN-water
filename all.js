@@ -35,3 +35,11 @@ function showArrow() {
   }
 }
 $(window).scroll(showArrow);
+
+// products fadin
+// $(document).ready(function () {
+//   $(this).hover(function () {
+//     $(".img_hover").delay(1500).fadeIn();
+//     $(this).delay(1500).fadeOut();
+//   });
+// });

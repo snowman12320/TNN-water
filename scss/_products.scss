@@ -1,0 +1,17 @@
+.img_hover {
+  display: none;
+  opacity: 0;
+}
+.img_ori{
+    transition:  1.5s;
+    &:hover {
+      display: none;
+      opacity: 0;
+    }
+
+}
+.img_ori:hover ~ .img_hover {
+  display: block;
+  opacity: 1;
+}
+

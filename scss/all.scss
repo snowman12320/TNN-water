@@ -63,7 +63,7 @@
 // 支援
 @import "./supports/function";
 // pages
-// @import "./about";
+@import "./index";
 // @import "./login";
 // @import "./products";
 // @import "./product";
@@ -74,7 +74,7 @@
   // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   //   "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
   //   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-family: MyCustomFont;
+  // font-family: MyCustomFont;
   box-sizing: border-box;
 }
 html {

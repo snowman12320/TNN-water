@@ -8,87 +8,46 @@
 
     <link rel="stylesheet" href="./scss/all.css" />
   </head>
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) {
+                elmnt.innerHTML = this.responseText;
+              }
+              if (this.status == 404) {
+                elmnt.innerHTML = "Page not found.";
+              }
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          };
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    }
+  </script>
   <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-white py-4 shadow-sm position-fixed top-0 w-100"
-      style="z-index: 9999"
-    >
-      <div class="container align-items-center">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#menuContent"
-          aria-controls="menuContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">
-          <img height="30" src="./內頁圖/logo.png" alt="" />
-        </a>
-        <ul class="list-unstyled m-0 d-flex order-1 order-lg-3">
-          <li>
-            <a href="#" class="h4">
-              <i class="fas fa-shopping-cart text-info"></i>
-            </a>
-          </li>
-        </ul>
-        <div class="collapse navbar-collapse order-2" id="menuContent">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="introduce.html"
-                >公司介紹</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="new.html">最新消息</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="product.html"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                商品介紹
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">...</a></li>
-                <li><a class="dropdown-item" href="#">...</a></li>
-                <li><a class="dropdown-item" href="#">...</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="service.html"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                服務項目
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">...</a></li>
-                <li><a class="dropdown-item" href="#">...</a></li>
-                <li><a class="dropdown-item" href="#">...</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">聯絡我們</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div w3-include-html="navbar.html"></div>
+    <!-- 放在include HTML後面 -->
+    <script>
+      includeHTML();
+    </script>
+    <!--  -->
     <!-- banner -->
     <section
       class="py-7 text-center d-flex align-items-center bp-center bs-cover"
@@ -112,141 +71,183 @@
       </div>
     </section>
     <!--  -->
-    <div class="border-1 m-5">施工中...</div>
-    <div class="container d-none">
-      <div class="row">
-        <section class="col-6 mx-auto">
+    <!-- <div class="border-1 m-5">施工中...</div> -->
+    <div class="container">
+      <div class="row row-cols-lg-2 row-cols-1 g-3">
+        <section class="mx-auto">
           <div class="">
-            <h3 class="position-relative py-5">
+            <h3 class="position-relative py-5 w-75 mx-auto">
               <hr />
               <span
-                class="position-absolute border border-3 bg-white"
+                class="position-absolute border border-3 bg-white py-2 px-3 fw-bold"
                 style="top: 40%; right: 40%; font-size: 16px"
                 >聯絡我們</span
               >
             </h3>
           </div>
           <!-- .section-title -->
-          <form class="d-flex flex-column w-75 mx-auto">
-            <label>姓名 (必填)</label>
-            <input
-              type="text"
-              name="your-name"
-              value=""
-              size="40"
-              class="form-control"
-            />
-            <label>公司名稱</label>
-            <input type="text" name="company" value="" size="40" style="" />
-            <label>電話 (必填)</label>
-            <input
-              type="tel"
-              name="your-phone"
-              value=""
-              size="40"
-              class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel"
-              aria-required="true"
-              aria-invalid="false"
-            />
-            <label>地址 (必填)</label>
-            <div class="">
-              <select name="shipping-county">
-                <option value="">---</option>
-                <option value="基隆市">基隆市</option>
-                <option value="臺北市">臺北市</option>
-                <option value="新北市">新北市</option>
-                <option value="桃園市">桃園市</option>
-                <option value="新竹縣">新竹縣</option>
-                <option value="新竹市">新竹市</option>
-                <option value="苗栗縣">苗栗縣</option>
-                <option value="臺中市">臺中市</option>
-                <option value="彰化縣">彰化縣</option>
-                <option value="南投縣">南投縣</option>
-                <option value="雲林縣">雲林縣</option>
-                <option value="嘉義縣">嘉義縣</option>
-                <option value="嘉義市">嘉義市</option>
-                <option value="臺南市">臺南市</option>
-                <option value="高雄市">高雄市</option>
-                <option value="屏東縣">屏東縣</option>
-                <option value="臺東縣">臺東縣</option>
-                <option value="花蓮縣">花蓮縣</option>
-                <option value="宜蘭縣">宜蘭縣</option>
-                <option value="連江縣">連江縣</option>
-                <option value="金門縣">金門縣</option>
-                <option value="澎湖縣">澎湖縣</option></select
-              ><input
-                type="text"
-                name="shipping-region"
-                value=""
-                size="40"
-                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                aria-required="true"
-                aria-invalid="false"
-                placeholder="行政區域"
-              />
-            </div>
-            <div class="order-form co-last">
+          <form
+            class="d-flex flex-column mx-auto gap-3 w-75 needs-validation"
+            novalidate
+          >
+            <div>
+              <label>姓名 (必填)</label>
               <input
                 type="text"
-                name="shipping-address"
+                name="your-name"
                 value=""
                 size="40"
-                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                aria-required="true"
-                aria-invalid="false"
-                placeholder="地址"
+                class="form-control"
+                required
               />
             </div>
-            <label>電子信箱 (必填)</label>
-            <input
-              type="email"
-              name="your-email"
-              value=""
-              size="40"
-              class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
-              aria-required="true"
-              aria-invalid="false"
-            />
-            <label>分類 (必填)</label>
-            <select name="select-kind">
-              <option value="">---</option>
-              <option value="資料請求">資料請求</option>
-              <option value="產品疑問">產品疑問</option>
-              <option value="產品報修">產品報修</option>
-              <option value="客訴案件">客訴案件</option>
-              <option value="付款問題">付款問題</option>
-              <option value="其他">其他</option>
-            </select>
-            <label>需求内容 (必填)</label>
-            <textarea
-              name="your-message"
-              cols="40"
-              rows="10"
-              class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
-              aria-required="true"
-              aria-invalid="false"
-            ></textarea>
+            <div>
+              <label>公司名稱</label>
+              <input
+                type="text"
+                name="company"
+                value=""
+                size="40"
+                class="form-control"
+              />
+            </div>
+            <div>
+              <label>電話 (必填)</label>
+              <input
+                type="tel"
+                name="your-phone"
+                value=""
+                size="40"
+                class="form-control"
+                aria-required="true"
+                aria-invalid="false"
+                required
+              />
+            </div>
+            <div>
+              <label>地址 (必填)</label>
+              <div class="row g-0">
+                <div class="w-25">
+                  <select name="shipping-county" class="form-select" required>
+                    <option value="">---</option>
+                    <option value="基隆市">基隆市</option>
+                    <option value="臺北市">臺北市</option>
+                    <option value="新北市">新北市</option>
+                    <option value="桃園市">桃園市</option>
+                    <option value="新竹縣">新竹縣</option>
+                    <option value="新竹市">新竹市</option>
+                    <option value="苗栗縣">苗栗縣</option>
+                    <option value="臺中市">臺中市</option>
+                    <option value="彰化縣">彰化縣</option>
+                    <option value="南投縣">南投縣</option>
+                    <option value="雲林縣">雲林縣</option>
+                    <option value="嘉義縣">嘉義縣</option>
+                    <option value="嘉義市">嘉義市</option>
+                    <option value="臺南市">臺南市</option>
+                    <option value="高雄市">高雄市</option>
+                    <option value="屏東縣">屏東縣</option>
+                    <option value="臺東縣">臺東縣</option>
+                    <option value="花蓮縣">花蓮縣</option>
+                    <option value="宜蘭縣">宜蘭縣</option>
+                    <option value="連江縣">連江縣</option>
+                    <option value="金門縣">金門縣</option>
+                    <option value="澎湖縣">澎湖縣</option>
+                  </select>
+                </div>
+                <div class="w-25">
+                  <input
+                    type="text"
+                    name="shipping-region"
+                    value=""
+                    class="form-control"
+                    aria-required="true"
+                    aria-invalid="false"
+                    placeholder="行政區域"
+                    required
+                  />
+                </div>
+                <div class="w-50">
+                  <input
+                    type="text"
+                    name="shipping-address"
+                    value=""
+                    class="form-control"
+                    aria-required="true"
+                    aria-invalid="false"
+                    placeholder="地址"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div>
+              <label>電子信箱 (必填)</label>
+              <input
+                type="email"
+                name="your-email"
+                value=""
+                size="40"
+                class="form-control"
+                aria-required="true"
+                aria-invalid="false"
+                required
+              />
+            </div>
+            <div>
+              <label>分類 (必填)</label>
+              <select name="select-kind" class="form-select" required>
+                <option value="">---</option>
+                <option value="資料請求">資料請求</option>
+                <option value="產品疑問">產品疑問</option>
+                <option value="產品報修">產品報修</option>
+                <option value="客訴案件">客訴案件</option>
+                <option value="付款問題">付款問題</option>
+                <option value="其他">其他</option>
+              </select>
+            </div>
+            <div>
+              <label>需求内容 (必填)</label>
+              <textarea
+                name="your-message"
+                cols="10"
+                rows="3"
+                class="form-control"
+                aria-required="true"
+                aria-invalid="false"
+                required
+              ></textarea>
+            </div>
             <input
               type="submit"
               value="發送"
-              class="wpcf7-form-control wpcf7-submit button"
+              class="btn btn-primary rounded-0"
             />
+            <p
+              style="
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 1.7;
+                margin-top: 16px;
+              "
+            >
+              服務專線: 080-080-9000<br />
+              訂水專線: 02-2291-9000
+            </p>
           </form>
-          <p
-            style="
-              font-size: 18px;
-              font-weight: 600;
-              margin-top: -10px;
-              line-height: 1.7;
-            "
-          >
-            服務專線: 080-080-9000<br />
-            訂水專線: 02-2291-9000
-          </p>
         </section>
-        <section class="col-6">
+        <section class="">
+          <div class="">
+            <h3 class="position-relative py-5">
+              <hr />
+              <span
+                class="position-absolute border border-3 bg-white py-2 px-3 fw-bold"
+                style="top: 40%; right: 40%; font-size: 16px"
+                >問題與解答</span
+              >
+            </h3>
+          </div>
           <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
+            <div class="accordion-item border-top border-1">
               <h2 class="accordion-header" id="flush-headingOne">
                 <button
                   class="accordion-button collapsed"
@@ -256,7 +257,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseOne"
                 >
-                  Accordion Item #1
+                  自來水pH依「飲用水水質標準」規定為多少？它與人體健康的關係為何？
                 </button>
               </h2>
               <div
@@ -266,9 +267,7 @@
                 data-bs-parent="#accordionFlushExample"
               >
                 <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the first item's accordion body.
+                  「飲用水水質標準」之pH值的含量是六．○～八．五，事實上pH值與人體健康的無密切關係，因此各國在制訂此一標準時多依照其水源的pH值來訂定。雖本省某些地區地下水水源的pH值低於六．五且高於六．○，但對人體健康不會產生影響。
                 </div>
               </div>
             </div>
@@ -282,7 +281,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseTwo"
                 >
-                  Accordion Item #2
+                  貴公司所生產飲水機是否保證驗菌合格？
                 </button>
               </h2>
               <div
@@ -292,10 +291,8 @@
                 data-bs-parent="#accordionFlushExample"
               >
                 <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the second item's accordion body. Let's imagine this being
-                  filled with some actual content.
+                  本公司飲水機冰溫熱水皆採煮沸殺菌，再以冷熱交換方式給水，獨特生水隔離專利設計，保證喝不到一滴生水；另有溫度保護設計，熱水溫度低於80℃-98℃不給水，避免民眾喝到生水，溫水溫度高於40
+                  -60℃不給水，避免民眾誤觸燙傷，在定期維護保養之前題下，保證驗菌合格，如因環保單位檢驗不合格，罰款與改善複驗費用，由本公司全權負責。
                 </div>
               </div>
             </div>
@@ -309,7 +306,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseThree"
                 >
-                  Accordion Item #3
+                  飲用水「鋁」含量的標準為何?若要安裝，建議何種淨水器？
                 </button>
               </h2>
               <div
@@ -319,13 +316,187 @@
                 data-bs-parent="#accordionFlushExample"
               >
                 <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the third item's accordion body. Nothing more exciting
-                  happening here in terms of content, but just filling up the
-                  space to make it look, at least at first glance, a bit more
-                  representative of how this would look in a real-world
-                  application.
+                  世界衛生組織曾訂出飲用水鋁含量不宜高於0.15ppm（毫克╱公升）的警戒值，歐盟也依此訂定管制標準，加拿大、澳洲及日本管制標準也在0.1至0.2
+                  ppm。環保署2014年7月將鋁含量納入飲用水質標準，2015年7月加嚴到0.3ppm。
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingfour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapsefour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapsefour"
+                >
+                  桶裝水是什麼水，利用什麼方式殺菌? 桶裝水的瓶身材質?耐熱幾度?
+                </button>
+              </h2>
+              <div
+                id="flush-collapsefour"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingfour"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  純淨水，使用大型水處理過濾設備，將自來水中的雜質、泥沙、鐵鏽、重金屬、化學污染物濾除，並加入臭氧(O3)殺菌，臭氧(O3)為環保署飲用水公告許可的殺菌方式，無飲用安全疑慮，純淨水臭氧充填濃度只需0.3-0.4ppm，每月送台北市衛生局檢驗水質均合乎規定。桶裝水的瓶身材質為聚碳酸酯(PC)，可耐熱120~130度。
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingfive">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapsefive"
+                  aria-expanded="false"
+                  aria-controls="flush-collapsefive"
+                >
+                  如果水用量少，濾芯可延長更換時間嗎?
+                </button>
+              </h2>
+              <div
+                id="flush-collapsefive"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingfive"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  濾芯本身具有效保存期限，濾芯過水後即產生效用，為保障飲用水安全，建議應定期更換濾芯。每支濾芯的過濾效果不同，會依各地水質及用量建議更換濾芯的週期頻率，如有任何問題，皆可洽服務人員詢問。
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingsix">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapsesix"
+                  aria-expanded="false"
+                  aria-controls="flush-collapsesix"
+                >
+                  喝逆滲透水是否會缺乏礦物質？
+                </button>
+              </h2>
+              <div
+                id="flush-collapsesix"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingsix"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  渗透過濾是將水中95%的雜質、重金屬、農藥及濾過性病毒完全濾除成乾淨飲用水。
+                  人體所需的主要礦物質有鈣、磷、鉀、鈉等分佈在日常的六大類飲食中，水中富含的礦物質很有限，食物仍為人體吸收礦物質的主要來源，均衡飲食即可攝取足夠的礦物質，並不會因長期飲用逆滲透水或純水，而造成礦物質缺乏。
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingseven">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseseven"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseseven"
+                >
+                  飲水機為何要清缸?其清缸過程？
+                </button>
+              </h2>
+              <div
+                id="flush-collapseseven"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingseven"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  (1)
+                  飲水機使用時，加熱後會產生水垢，也因加熱過程會將細菌殺死，殘留細菌屍體(稱敗落晶)，這些水垢及敗落晶會附著上缸壁、電熱管上或沉在缸底。因此建議使用機器兩年以上須清缸，以達到飲水衛生及延長機器使用壽命。
+                  (2)
+                  將缸體內水全部放出→注入食品醋(檸檬酸)浸泡→加熱使水垢及敗落晶脫落→使用加壓馬達強水壓將凝結雜質(水垢.敗落晶)沖出→乾淨清水清洗三次以上→外觀清潔→測試機器(如有小問題故障予以免費修復調整)。
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingeight">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseeight"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseeight"
+                >
+                  國內飲用水管理是否有確切法條？
+                </button>
+              </h2>
+              <div
+                id="flush-collapseeight"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingeight"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  為確保飲用水水源水質，提昇公眾飲用水品質，維護國民健康，於民國95年訂定有飲用水管理條例。→參考連結http://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=O0040010
+                  並針對連續供水固定設備訂定維護辦法。→參考連結https://dws.epa.gov.tw/drinkwater/law/law05.htm
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingnine">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapsenine"
+                  aria-expanded="false"
+                  aria-controls="flush-collapsenine"
+                >
+                  飲水機(淨水器)及濾芯種類多，該如何選擇最合適設備？
+                </button>
+              </h2>
+              <div
+                id="flush-collapsenine"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingnine"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  飲水機(淨水器)及濾芯雖種類繁多，但依照各區水質、用量及用途的不同，各設備具有不同的過濾效果。歡迎洽詢各地服務中心，服務人員會依照您的需求推薦合適機種。
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingten">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseten"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseten"
+                >
+                  貴公司除銷售飲水機是否有其他商品販售？
+                </button>
+              </h2>
+              <div
+                id="flush-collapseten"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingten"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  本公司專門生產製造飲水相關產品，無生產非飲水類相關商品，主要供應程控殺菌飲水機、家用淨水器、外銷及開水機、瓶裝機等機種，年生產規模約三萬台。基地座落於新北市五股產業園區，全國最大飲水機製造基地，廠房規模五仟坪，產銷售一條龍經營。
+                  五股廠為標準檢驗局，全國正字標記唯一指定飲水機生產示範廠，歡迎隨時蒞廠指導。
                 </div>
               </div>
             </div>
@@ -334,54 +505,12 @@
       </div>
     </div>
     <!--  -->
-    <footer class="py-3 bg-dark text-white">
-      <ul class="list-unstyled d-flex justify-content-center pt-2 mb-0">
-        <li>
-          <a class="pe-5 link-white" href="index.html"
-            ><i class="fab h5 fa-facebook fs-1"></i
-          ></a>
-        </li>
-        <li class="pt-1">
-          <a class="pe-5 link-white" href="index.html"
-            ><i class="fa-brands fa-line fs-1"></i
-          ></a>
-        </li>
-        <li>
-          <a class="link-white" href="mailto:123@123.com"
-            ><i class="fas h5 fa-envelope fs-1"></i
-          ></a>
-        </li>
-      </ul>
-      <ul class="list-unstyled d-flex justify-content-center mb-0">
-        <li class="p-3">
-          <a href="index.html" class="link-light text-decoration-none"
-            >地址: 新北產業園區</a
-          >
-        </li>
-        <li class="p-3">
-          <a href="tel:+0220000000" class="link-light text-decoration-none"
-            >TEL:02-2000-0000
-          </a>
-        </li>
-        <li class="p-3">
-          <a href="#" class="link-light text-decoration-none"
-            >免付費專線: 080-000-0000</a
-          >
-        </li>
-      </ul>
-      <div class="text-center">
-        <p class="small text-secondary m-0">@copyright 2099 appreciate water</p>
-      </div>
-    </footer>
-    <!-- gototop -->
-    <a href="#top" id="arrow_up">
-      <img
-        src="./內頁圖/arrow-up.svg "
-        alt=""
-        style="width: 50px; background-color: #fff"
-        class="fixed-bottom ms-auto m-3 rounded-circle p-2 shadow"
-      />
-    </a>
+    <!--  -->
+    <div w3-include-html="footer.html"></div>
+    <!-- 放在include HTML後面 -->
+    <script>
+      includeHTML();
+    </script>
     <!--  -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -397,6 +526,31 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <!--  -->
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
     <script src="all.js"></script>
   </body>
 </html>

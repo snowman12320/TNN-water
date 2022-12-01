@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>觀水國際科技 ｜ 飲用水、淨水設備</title>
+
+    <link rel="stylesheet" href="./scss/all.css" />
+  </head>
+
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) {
+                elmnt.innerHTML = this.responseText;
+              }
+              if (this.status == 404) {
+                elmnt.innerHTML = "Page not found.";
+              }
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          };
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .product_container img {
+      vertical-align: middle;
+    }
+
+    /* Position the image container (needed to position the left and right arrows) */
+    .product_container {
+      position: relative;
+      width: 300px;
+    }
+
+    /* Hide the images by default */
+    .product_container .mySlides {
+      display: none;
+      margin-bottom: 10px;
+    }
+
+    /* Add a pointer when hovering over the thumbnail images */
+    .product_container .cursor {
+      cursor: pointer;
+    }
+
+    /* Next & previous buttons */
+    .product_container .prev,
+    .product_container .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 10px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+      transition: background-color 0.5s;
+    }
+
+    /* Position the "next button" to the right */
+    .product_container .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .product_container .prev:hover,
+    .product_container .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/3 etc) */
+    .product_container .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* Container for image text */
+    .product_container .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Six columns side by side */
+    .product_container .column {
+      float: left;
+      width: 16.66%;
+      padding: 0px 0px !important;
+    }
+
+    /* Add a transparency effect for thumnbail images */
+    .product_container .demo {
+      opacity: 0.6;
+    }
+
+    .product_container .active,
+    .product_container .demo:hover {
+      opacity: 1;
+    }
+  </style>
+
+  <body class="" id="top">
+    <div w3-include-html="navbar.html"></div>
+    <!-- 放在include HTML後面 -->
+    <script>
+      includeHTML();
+    </script>
+    <!--  -->
+
+    <main class="container" style="margin-top: 100px !important">
+      <section class="row pb-5 my-5">
+        <div class="col-md-6 px-0">
+          <div class="product_container">
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+              <img
+              src=https://i0.wp.com/myfone.blog/wp-content/uploads/2021/06/800x567-1.jpg"
+              style=" width: 100%; height: 300px; object-fit: cover;
+              object-position: center center; " />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+              <img
+                src="./images/內頁圖/內頁-2.jpg"
+                style="width: 100%; height: 300px; object-fit: cover"
+              />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+              <img
+                src="./images/內頁圖/內頁-4.jpg"
+                style="width: 100%; height: 300px; object-fit: cover"
+              />
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+              <img
+                src="./images/內頁圖/內頁-2.jpg"
+                style="
+                  width: 100%;
+                  height: 300px;
+                  object-fit: none;
+                  object-position: top center;
+                "
+              />
+            </div>
+
+            <!-- <a class="prev text-decoration-none" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a> -->
+
+            <div class="row mx-0">
+              <div class="column">
+                <img class="demo cursor"
+                src=https://i0.wp.com/myfone.blog/wp-content/uploads/2021/06/800x567-1.jpg"
+                style="width: 100%; height: 50px;object-fit: cover"
+                onclick="currentSlide(1)" />
+              </div>
+              <div class="column">
+                <img
+                  class="demo cursor"
+                  src="./images/內頁圖/內頁-2.jpg"
+                  style="width: 100%; height: 50px; object-fit: cover"
+                  onclick="currentSlide(2)"
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo cursor"
+                  src="./images/內頁圖/內頁-4.jpg"
+                  style="width: 100%; height: 50px; object-fit: cover"
+                  onclick="currentSlide(3)"
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo cursor"
+                  src="./images/內頁圖/內頁-2.jpg"
+                  style="
+                    width: 100%;
+                    height: 50px;
+                    object-fit: cover;
+                    object-position: top center;
+                  "
+                  onclick="currentSlide(4)"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mt-5 px-2">
+          <h2>UR-6602AW-1</h2>
+          <h1 class="mb-5 text-primary">數位開水機 (UR-6602AW- 1)</h1>
+          <p>NT$ <strong>36,900</strong></p>
+          <ul>
+            <li>淨化、殺菌、冰溫熱一機完成</li>
+            <li>節電雙模式設計，省電最創新</li>
+            <li>「高效瞬熱交換」殺菌，保證喝不到生水</li>
+            <li>創新IR偵測，自動切換時鐘及使用模式</li>
+            <li>智能濾芯更換提醒，新卡式濾芯設計，輕鬆DIY不費力</li>
+            <li>完整安全設計，使用更放心</li>
+            <li>熱水鎖定設計</li>
+          </ul>
+          <hr />
+          <div>
+            <a href="#intro_tag">商品介紹</a>
+            <a href="#size_tag">商品規格</a>
+          </div>
+          <button
+            type="button"
+            class="btn-primary btn rounded-0 text-white py-2 px-3 d-block"
+          >
+            線上購買
+          </button>
+        </div>
+      </section>
+      <section class="intro w-75 mx-auto">
+        <hr />
+        <h3
+          class="border-primary border-start border-3 my-3 ps-3"
+          id="intro_tag"
+        >
+          商品介紹
+        </h3>
+        <div class="w-100">
+          <ul>
+            <li>產品採全自動進水、經過四道NSF認證的濾芯淨化</li>
+            <li>高溫殺菌、製冷，讓「淨化、殺菌、冰溫熱」一機完成</li>
+            <li>
+              市面上家用飲水機唯一使用『高效瞬熱交換』系統，確保每一滴水都經高溫煮過（包含冰水及溫水）~
+            </li>
+            <li>
+              創新「IR偵測」與「雙模式節電」設計，確保產品在對的時間運作，使用最省電節能的方式滿足使用者的用水需求
+            </li>
+          </ul>
+          <img
+          src=https://i0.wp.com/myfone.blog/wp-content/uploads/2021/06/800x567-1.jpg"
+          alt="" style="max-width: 300px; height: 300px" class="of-cover d-block
+          mx-auto mb-3 w-100" />
+        </div>
+        <h3
+          class="border-primary border-start border-3 my-3 ps-3"
+          id="size_tag"
+        >
+          商品規格
+        </h3>
+        <table width="460" class="border-1 border">
+          <tbody class="border-1 border">
+            <tr class="border-1 border">
+              <td width="91" class="border-1 border">機型</td>
+              <td width="363" class="border-1 border">UR-6602AW-1</td>
+            </tr>
+            <tr>
+              <td width="91" class="border-1 border">品名</td>
+              <td width="363" class="border-1 border">桌上冰溫熱飲水機</td>
+            </tr>
+            <tr>
+              <td width="91" class="border-1 border">規格</td>
+              <td width="363" class="border-1 border">冰溫熱</td>
+            </tr>
+            <tr>
+              <td width="91" class="border-1 border">電壓</td>
+              <td width="363" class="border-1 border">110V/60HZ</td>
+            </tr>
+            <tr>
+              <td width="91" class="border-1 border">過濾系統</td>
+              <td>RO系統 UF-591,UF-592,UF-504,UF-594</td>
+            </tr>
+            <tr>
+              <td width="91" class="border-1 border">容量</td>
+              <td width="363" class="border-1 border">熱缸3公升，溫缸2公升 ，冰缸1.5公升</td>
+            </tr>
+            <tr>
+              <td width="91" class="border-1 border">出水量</td>
+              <td>熱水7.5公升/小時，冰水3公升/小時</td>
+            </tr>
+            <tr>
+              <td width="91" class="border-1 border">杯取量</td>
+              <td>熱水10.2公升/小時，冰水5.6公升/小時</td>
+            </tr>
+            <tr>
+              <td width="91" class="border-1 border">消耗電功率</td>
+              <td>加熱功率750W 製冷功率145W 保溫功率500W</td>
+            </tr>
+            <tr>
+              <td width="91" class="border-1 border">尺寸</td>
+              <td width="363" class="border-1 border">寬310 x 深550 x 高510 mm(含接水盒)</td>
+            </tr>
+            <tr>
+              <td width="91" class="border-1 border">進水口徑</td>
+              <td>1/4”(2分)</td>
+            </tr>
+            <tr>
+              <td width="91" class="border-1 border">排水口徑</td>
+              <td>1/4”(2分)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <div w3-include-html="footer.html"></div>
+    <!-- 放在include HTML後面 -->
+    <script>
+      includeHTML();
+    </script>
+    <!--  -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-body text-center" id="modal-body"></div>
+        </div>
+      </div>
+    </div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v15.0"
+      nonce="2g9KeDoZ"
+    ></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <!-- carousel photo + all.js?v=20221030 photo carousel-->
+    <link
+      rel="stylesheet"
+      href="./woocommerce-FlexSlider-690832b/flexslider.css"
+      type="text/css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="./woocommerce-FlexSlider-690832b/jquery.flexslider.js"></script>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+
+    <script src="./javascripts/all.js"></script>
+  </body>
+</html>

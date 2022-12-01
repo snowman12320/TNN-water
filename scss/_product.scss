@@ -1,0 +1,33 @@
+.arrow_path::after {
+  content: ">";
+  color: $qopink;
+  margin-left: 15px;
+}
+.flex-prev {
+  height: 58px !important;
+}
+.flex-next {
+  height: 58px !important;
+}
+@include maxphone() {
+  .flexslider {
+    width: 300px !important;
+    height: 250px !important;
+  }
+  .slides img {
+    width: 250px !important;
+    height: 250px !important;
+  }
+}
+
+table {
+    width: 100%;
+    margin-bottom: 1em;
+    border-color: #ececec;
+    border-spacing: 0;
+}
+
+
+
+
+

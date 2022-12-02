@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>觀水國際科技 ｜ 飲用水、淨水設備</title>
+    <link rel="stylesheet" href="./scss/all.css" />
+  </head>
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) {
+                elmnt.innerHTML = this.responseText;
+              }
+              if (this.status == 404) {
+                elmnt.innerHTML = "Page not found.";
+              }
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          };
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    }
+  </script>
+  <div w3-include-html="navbar.html"></div>
+  <!-- 放在include HTML後面 -->
+  <script>
+    includeHTML();
+  </script>
+  <!--  -->
+
+  <body class="" id="top">
+    <div class="mt-3 container" style="margin-top: 130px !important">
+      <form class="col-12 col-lg-8 mx-auto">
+        <h1
+          class="mt-lg-0 mt-3"
+          style="font-weight: 100 !important; font-size: 24px"
+        >
+          購物車內容
+        </h1>
+        <section class="border border-0 shadow-sm rounded-0 p-3 overflow-auto">
+          <table class="table">
+            <thead>
+              <tr>
+                <!-- <th scope="col "></th> -->
+                <th scope="col ">商品</th>
+                <th scope="col"></th>
+                <th scope="col">規格</th>
+                <th scope="col" class="">數量</th>
+                <!-- <th scope="col" class="">價格</th> -->
+                <th scope="col" class="text-nowrap"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="">
+                <th scope="row" class="">
+                  <img
+                  src=https://i0.wp.com/myfone.blog/wp-content/uploads/2021/06/800x567-1.jpg"
+                  alt="" srcset="" class="op-center of-cover" height="100"
+                  width="100" />
+                </th>
+                <td class="w-25">
+                  <a
+                    href="product.html"
+                    class="link-dark text-decoration-none text-nowrap"
+                  >
+                    智能家庭型數位開水機
+                  </a>
+                </td>
+                <td class="text-nowrap">UR-6602AW-1</td>
+                <td>
+                  <div class="ctrl">
+                    <div class="ctrl__button ctrl__button--decrement">–</div>
+                    <div class="ctrl__counter">
+                      <input
+                        class="ctrl__counter-input"
+                        maxlength="10"
+                        type="text"
+                        value="0"
+                      />
+                      <div class="ctrl__counter-num">1</div>
+                    </div>
+                    <div class="ctrl__button ctrl__button--increment">+</div>
+                  </div>
+                </td>
+                <!-- <td>NT$16,650</td> -->
+                <td class="text-nowrap text-center">
+                  <a href="index.html" class="link-dark">
+                    <i class="fa-sharp fa-solid fa-trash"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex flex-column">
+            <span class="ms-auto"
+              >小計 NT$ <strong class="fs-3">16,500</strong></span
+            >
+          </div>
+        </section>
+        <h2 class="mt-4" style="font-size: 24px">付款運送方式</h2>
+        <section class="">
+          <ul class="list-group border-0 shadow-sm rounded-0">
+            <li class="list-group-item border-0">
+              <h3 style="font-size: 18px">配送方式</h3>
+              <div class="d-flex flex-column">
+                <div>
+                  <!-- <input
+                    type="radio"
+                    id="deliver_shop"
+                    class=""
+                    name="deliver"
+                    checked
+                  /><label for="deliver_shop">超商取貨付款</label> -->
+                  <!-- <div class="mb-2 d-none">
+                    <p class="mb-0">請選擇超商</p>
+                    <input
+                      type="button"
+                      class="btn btn-qopink text-white w-100"
+                      value="請選擇門市"
+                    />
+                    <input
+                      type="button"
+                      class="btn btn-qopink text-white d-none w-100"
+                      value="更改取貨門市"
+                    />
+
+                    <div class="bg-qopink text-white p-1 pb-0 mt-1 d-none">
+                      <p>已選擇的門市：</p>
+                    </div>
+                  </div> -->
+                </div>
+                <div>
+                  <!-- <div>
+                    <input
+                      type="radio"
+                      id="deliver_pay_done"
+                      name="deliver"
+                    /><label for="deliver_pay_done">貨到付款 </label>
+                  </div> -->
+                  <div>
+                    <input
+                      type="radio"
+                      id="deliver_home"
+                      name="deliver"
+                      checked
+                    /><label for="deliver_home">宅配 </label>
+                    <!-- <div class="d-none mt-3">
+                      <h3>請選擇配送地區</h3>
+                      <div class="d-flex flex-column gap-3 mb-2">
+                        <div>
+                          <input
+                            type="radio"
+                            id="arrival_tai"
+                            class=""
+                            name="deliver_area"
+                            checked
+                          /><label for="arrival_tai">台灣本島 </label>
+                          <div class="d-none">
+                            <select name="taiwan" class="form-select">
+                              <option value="" disabled selected>
+                                請選擇物流
+                              </option>
+                              <option value="taiwan">
+                                宅配/台灣本島 (常溫) - NT$80
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                        <div>
+                          <input
+                            type="radio"
+                            id="arrival_aborad"
+                            name="deliver_area"
+                          /><label for="arrival_aborad">海外國家 </label>
+                          <div class="d-none">
+                            <select
+                              name="abroad "
+                              id="abroad "
+                              class="form-select"
+                            >
+                              <option value="" disabled selected>
+                                請選擇物流
+                              </option>
+                              <option value="abroad_south">
+                                順豐速運(馬來西亞、新加坡) (常溫) - NT$400
+                              </option>
+                              <option value="abroad_east">
+                                順豐速運(中國、香港、澳門) (常溫) - NT$150
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item border-0">
+              <h3 style="font-size: 18px !important">付款方式</h3>
+              <div class="mb-2">
+                <div>
+                  <input
+                    type="radio"
+                    id="pay_card"
+                    class=""
+                    name="pay"
+                    checked
+                  /><label for="pay_card" class="me-2"
+                    >信用卡(VISA、MasterCard、JCB)
+                  </label>
+                  <div class="d-none my-3">
+                    <div class="mb-2">
+                      <label class="control-label">信用卡卡號</label>
+                      <div class="d-flex gap-3">
+                        <div class="span3">
+                          <input
+                            type="text"
+                            class="form-control w-100 rounded-0"
+                            autocomplete="on"
+                            maxlength="4"
+                            pattern="\d{4}"
+                            title="First four digits"
+                            placeholder="XXXX"
+                            required
+                          />
+                        </div>
+                        <div class="span3">
+                          <input
+                            type="text"
+                            class="form-control w-100 rounded-0"
+                            autocomplete="on"
+                            maxlength="4"
+                            pattern="\d{4}"
+                            title="Second four digits"
+                            placeholder="XXXX"
+                            required
+                          />
+                        </div>
+                        <div class="span3">
+                          <input
+                            type="text"
+                            class="form-control w-100 rounded-0"
+                            autocomplete="on"
+                            maxlength="4"
+                            pattern="\d{4}"
+                            title="Third four digits"
+                            placeholder="XXXX"
+                            required
+                          />
+                        </div>
+                        <div class="span3">
+                          <input
+                            type="text"
+                            class="form-control w-100 rounded-0"
+                            autocomplete="on"
+                            maxlength="4"
+                            pattern="\d{4}"
+                            title="Fourth four digits"
+                            placeholder="XXXX"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2 w-50">
+                      <label class="control-label">信用卡姓名</label>
+                      <div class="controls">
+                        <input
+                          type="text"
+                          class="form-control w-100 rounded-0"
+                          pattern="\w+ \w+.*"
+                          title="Fill your first and last name"
+                          placeholder="英文大寫姓名"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="mb-2 w-50">
+                      <label class="control-label">有效期限</label>
+                      <div class="d-flex">
+                        <div class="w-100">
+                          <select class="w-100 form-select rounded-0">
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                          </select>
+                        </div>
+                        <div class="w-100">
+                          <select class="form-select w-100 rounded-0">
+                            <option>2023</option>
+                            <option>2024</option>
+                            <option>2025</option>
+                            <option>2026</option>
+                            <option>2027</option>
+                            <option>2028</option>
+                            <option>2029</option>
+                            <option>2030</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-2 w-25">
+                      <label class="">安全碼</label>
+                      <input
+                        type="text"
+                        class="form-control w-100 rounded-0"
+                        autocomplete="off"
+                        maxlength="3"
+                        pattern="\d{3}"
+                        title="Three digits at back of your card"
+                        placeholder="XXX"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- <div>
+                  <input type="radio" id="pay_atm" name="pay" checked /><label
+                    for="pay_atm"
+                    >虛擬ATM
+                  </label>
+                </div> -->
+              </div>
+              <!-- <h4 class="mb-0" for="remark" style="font-size: 18px !important">備註</h4>
+              <textarea
+                name="remark"
+                id="remark"
+                cols="30"
+                rows="1"
+                class="w-100 form-control"
+              ></textarea> -->
+            </li>
+            <li class="list-group-item border-0">
+              <h3 style="font-size: 18px !important">購買人資訊</h3>
+              <form class="row">
+                <div class="col-md-12">
+                  <label for="inputEmail4" class="form-label mb-0">姓名</label>
+                  <input
+                    type="email"
+                    class="form-control mb-2 rounded-0"
+                    id="inputEmail4 "
+                    placeholder="購買人姓名"
+                  />
+                </div>
+                <div class="col-md-12">
+                  <label for="inputPassword4" class="form-label mb-0"
+                    >聯絡電話</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control mb-2 rounded-0"
+                    id="inputPassword4"
+                    placeholder="例：0987654321"
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label mb-0 mt-3"
+                    >購買人地址</label
+                  >
+                  <div class="d-flex flex-column mb-2">
+                    <div>
+                      <input
+                        type="radio"
+                        id="address_tai"
+                        class=""
+                        name="address"
+                        checked
+                      /><label for="address_tai">台灣 </label>
+                      <div class="d-none">
+                        <div class="twzipcode row-fulid input-row">
+                          <div class="margin-bottom-small input-column">
+                            <div
+                              data-role="county"
+                              data-name="order[billing_address_attributes][city]"
+                              data-style="form-control"
+                            >
+                              <select
+                                name="order[billing_address_attributes][city]"
+                                class="form-control rounded-0"
+                              >
+                                <option value="">縣市</option>
+                                <option value="基隆市">基隆市</option>
+                                <option value="台北市">台北市</option>
+                                <option value="新北市">新北市</option>
+                                <option value="宜蘭縣">宜蘭縣</option>
+                                <option value="新竹市">新竹市</option>
+                                <option value="新竹縣">新竹縣</option>
+                                <option value="桃園市">桃園市</option>
+                                <option value="苗栗縣">苗栗縣</option>
+                                <option value="台中市">台中市</option>
+                                <option value="彰化縣">彰化縣</option>
+                                <option value="南投縣">南投縣</option>
+                                <option value="嘉義市">嘉義市</option>
+                                <option value="嘉義縣">嘉義縣</option>
+                                <option value="雲林縣">雲林縣</option>
+                                <option value="台南市">台南市</option>
+                                <option value="高雄市">高雄市</option>
+                                <option value="屏東縣">屏東縣</option>
+                                <option value="台東縣">台東縣</option>
+                                <option value="花蓮縣">花蓮縣</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="margin-bottom-small input-column">
+                            <div
+                              data-role="district"
+                              data-name="order[billing_address_attributes][district]"
+                              data-style="form-control"
+                            >
+                              <!-- <select
+                                name="order[billing_address_attributes][district]"
+                                class="form-control rounded-0"
+                              >
+                                <option value="">鄉鎮市區</option>
+                              </select> -->
+                              <input
+                                type="text"
+                                class="form-control rounded-0"
+                                id="inputAddress"
+                                placeholder="鄉鎮市區"
+                              />
+                              <input
+                                type="text"
+                                class="form-control mb-2 rounded-0"
+                                id="inputAddress"
+                                placeholder="請填寫詳細購買人地址：路/巷/弄/樓"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div>
+                      <input
+                        type="radio"
+                        id="address_aborad"
+                        name="address"
+                      /><label for="address_aborad">海外國家 </label>
+                      <div class="d-none">
+                        <select
+                          name="order[billing_address_attributes][country]"
+                          class="form-control"
+                        >
+                          <option label="請選擇國家"></option>
+                          <option id="1" value="Albania">
+                            Albania 阿爾巴尼亞
+                          </option>
+                          <option id="2" value="Algeria">
+                            Algeria 阿爾及利亞
+                          </option>
+                          <option id="3" value="American Samoa">
+                            American Samoa 美屬薩摩亞
+                          </option>
+                          <option id="4" value="Angola">Angola 安哥拉</option>
+                          <option id="5" value="Anguilla">
+                            Anguilla 安圭拉
+                          </option>
+                          <option id="6" value="Antartica">
+                            Antartica 南極洲
+                          </option>
+                          <option id="7" value="Antigua and Barbuda">
+                            Antigua and Barbuda 安地卡及巴布達
+                          </option>
+                          <option id="8" value="Argentina">
+                            Argentina 阿根廷
+                          </option>
+                          <option id="9" value="Armenia">
+                            Armenia 亞美尼亞
+                          </option>
+                          <option id="10" value="Aruba">Aruba 阿魯巴</option>
+                          <option id="11" value="Ashmore and Cartier Island">
+                            Ashmore and Cartier Island 阿什莫爾和卡地亞島
+                          </option>
+                          <option id="12" value="Australia">
+                            Australia 澳大利亞
+                          </option>
+                          <option id="13" value="Austria">
+                            Austria 奧地利
+                          </option>
+                          <option id="14" value="Azerbaijan">
+                            Azerbaijan 阿塞拜疆
+                          </option>
+                          <option id="15" value="Bahamas">
+                            Bahamas 巴哈馬
+                          </option>
+                          <option id="16" value="Bahrain">Bahrain 巴林</option>
+                          <option id="17" value="Bangladesh">
+                            Bangladesh 孟加拉國
+                          </option>
+                          <option id="18" value="Barbados">
+                            Barbados 巴巴多斯
+                          </option>
+                          <option id="19" value="Belarus">
+                            Belarus 白俄羅斯
+                          </option>
+                          <option id="20" value="Belgium">
+                            Belgium 比利時
+                          </option>
+                          <option id="21" value="Belize">Belize 伯利茲</option>
+                          <option id="22" value="Benin">Benin 貝寧</option>
+                          <option id="23" value="Bermuda">
+                            Bermuda 百慕達群島
+                          </option>
+                          <option id="24" value="Bhutan">Bhutan 不丹</option>
+                          <option id="25" value="Bolivia">
+                            Bolivia 玻利維亞
+                          </option>
+                          <option id="26" value="Bosnia and Herzegovina">
+                            Bosnia and Herzegovina 波斯尼亞 - 黑塞哥維那
+                          </option>
+                          <option id="27" value="Botswana">
+                            Botswana 博茨瓦納
+                          </option>
+                          <option id="28" value="Brazil">Brazil 巴西</option>
+                          <option id="29" value="British Virgin Islands">
+                            British Virgin Islands 英屬維爾京群島
+                          </option>
+                          <option id="30" value="Brunei">Brunei 汶萊</option>
+                          <option id="31" value="Bulgaria">
+                            Bulgaria 保加利亞
+                          </option>
+                          <option id="32" value="Burkina Faso">
+                            Burkina Faso 布吉納法索
+                          </option>
+                          <option id="33" value="Burma">Burma 緬甸</option>
+                          <option id="34" value="Burundi">
+                            Burundi 蒲隆地
+                          </option>
+                          <option id="35" value="Cambodia">
+                            Cambodia 柬埔寨
+                          </option>
+                          <option id="36" value="Cameroon">
+                            Cameroon 喀麥隆
+                          </option>
+                          <option id="37" value="Canada">Canada 加拿大</option>
+                          <option id="38" value="Cape Verde">
+                            Cape Verde 佛得角
+                          </option>
+                          <option id="39" value="Cayman Islands">
+                            Cayman Islands 開曼群島
+                          </option>
+                          <option id="40" value="Central African Republic">
+                            Central African Republic 中非共和國
+                          </option>
+                          <option id="41" value="Chad">Chad 乍得</option>
+                          <option id="42" value="Chile">Chile 智利</option>
+                          <option id="43" value="China">China 中國</option>
+                          <option id="44" value="Christmas Island">
+                            Christmas Island 聖誕島
+                          </option>
+                          <option id="45" value="Clipperton Island">
+                            Clipperton Island 克利珀頓島
+                          </option>
+                          <option id="46" value="Cocos (Keeling) Islands">
+                            Cocos (Keeling) Islands 科科斯(基林)群島
+                          </option>
+                          <option id="47" value="Colombia">
+                            Colombia 哥倫比亞
+                          </option>
+                          <option id="48" value="Comoros">
+                            Comoros 科摩羅
+                          </option>
+                          <option
+                            id="49"
+                            value="Congo, Democratic Republic of the"
+                          >
+                            Congo, Democratic Republic of the 剛果民主共和國
+                          </option>
+                          <option id="50" value="Congo, Republic of the">
+                            Congo, Republic of the 剛果共和國
+                          </option>
+                          <option id="51" value="Cook Islands">
+                            Cook Islands 庫克群島
+                          </option>
+                          <option id="52" value="Costa Rica">
+                            Costa Rica 哥斯達黎加
+                          </option>
+                          <option id="53" value="Cote d'Ivoire">
+                            Cote d'Ivoire 象牙海岸
+                          </option>
+                          <option id="54" value="Croatia">
+                            Croatia 克羅地亞
+                          </option>
+                          <option id="55" value="Cuba">Cuba 古巴</option>
+                          <option id="56" value="Cyprus">
+                            Cyprus 塞浦路斯
+                          </option>
+                          <option id="57" value="Czeck Republic">
+                            Czeck Republic 捷克
+                          </option>
+                          <option id="58" value="Denmark">Denmark 丹麥</option>
+                          <option id="59" value="Djibouti">
+                            Djibouti 吉布提
+                          </option>
+                          <option id="60" value="Dominica">
+                            Dominica 多米尼克
+                          </option>
+                          <option id="61" value="Dominican Republic">
+                            Dominican Republic 多米尼加共和國
+                          </option>
+                          <option id="62" value="Ecuador">
+                            Ecuador 厄瓜多爾
+                          </option>
+                          <option id="63" value="Egypt">Egypt 埃及</option>
+                          <option id="64" value="El Salvador">
+                            El Salvador 薩爾瓦多
+                          </option>
+                          <option id="65" value="Equatorial Guinea">
+                            Equatorial Guinea 赤道幾內亞
+                          </option>
+                          <option id="66" value="Eritrea">
+                            Eritrea 厄立特里亞
+                          </option>
+                          <option id="67" value="Estonia">
+                            Estonia 愛沙尼亞
+                          </option>
+                          <option id="68" value="Ethiopia">
+                            Ethiopia 埃塞俄比亞
+                          </option>
+                          <option id="69" value="Europa Island">
+                            Europa Island 歐羅巴島
+                          </option>
+                          <option
+                            id="70"
+                            value="Falkland Islands (Islas Malvinas)"
+                          >
+                            Falkland Islands (Islas Malvinas)
+                            福克蘭群島(馬爾維納斯群島)
+                          </option>
+                          <option id="71" value="Faroe Islands">
+                            Faroe Islands 法羅群島
+                          </option>
+                          <option id="72" value="Fiji">Fiji 斐濟</option>
+                          <option id="73" value="Finland">Finland 芬蘭</option>
+                          <option id="74" value="France">France 法國</option>
+                          <option id="75" value="French Guiana">
+                            French Guiana 法屬圭亞那
+                          </option>
+                          <option id="76" value="French Polynesia">
+                            French Polynesia 法屬波利尼西亞
+                          </option>
+                          <option
+                            id="77"
+                            value="French Southern and Antarctic Lands"
+                          >
+                            French Southern and Antarctic Lands
+                            法國南部和南極土地
+                          </option>
+                          <option id="78" value="Gabon">Gabon 加彭</option>
+                          <option id="79" value="Gambia, The">
+                            Gambia, The 甘比亞
+                          </option>
+                          <option id="80" value="Gaza Strip">
+                            Gaza Strip 加薩走廊
+                          </option>
+                          <option id="81" value="Georgia">
+                            Georgia 格魯吉亞
+                          </option>
+                          <option id="82" value="Germany">Germany 德國</option>
+                          <option id="83" value="Ghana">Ghana 加納</option>
+                          <option id="84" value="Gibraltar">
+                            Gibraltar 直布羅陀
+                          </option>
+                          <option id="85" value="Glorioso Islands">
+                            Glorioso Islands 格洛里厄斯群島
+                          </option>
+                          <option id="86" value="Greece">Greece 希臘</option>
+                          <option id="87" value="Greenland">
+                            Greenland 格陵蘭
+                          </option>
+                          <option id="88" value="Grenada">
+                            Grenada 格瑞那達
+                          </option>
+                          <option id="89" value="Guadeloupe">
+                            Guadeloupe 瓜德羅普
+                          </option>
+                          <option id="90" value="Guam">Guam 關島</option>
+                          <option id="91" value="Guatemala">
+                            Guatemala 瓜地馬拉
+                          </option>
+                          <option id="92" value="Guernsey">
+                            Guernsey 根西
+                          </option>
+                          <option id="93" value="Guinea">Guinea 幾內亞</option>
+                          <option id="94" value="Guinea-Bissau">
+                            Guinea-Bissau 幾內亞比紹
+                          </option>
+                          <option id="95" value="Guyana">Guyana 圭亞那</option>
+                          <option id="96" value="Haiti">Haiti 海地</option>
+                          <option
+                            id="97"
+                            value="Heard Island and McDonald Islands"
+                          >
+                            Heard Island and McDonald Islands
+                            赫德島和麥克唐納群島
+                          </option>
+                          <option id="98" value="Holy See (Vatican City)">
+                            Holy See (Vatican City) 梵帝岡
+                          </option>
+                          <option id="99" value="Honduras">
+                            Honduras 洪都拉斯
+                          </option>
+                          <option id="100" value="Hong Kong">
+                            Hong Kong 香港
+                          </option>
+                          <option id="101" value="Howland Island">
+                            Howland Island 豪蘭島
+                          </option>
+                          <option id="102" value="Hungary">
+                            Hungary 匈牙利
+                          </option>
+                          <option id="103" value="Iceland">Iceland 冰島</option>
+                          <option id="104" value="India">India 印度</option>
+                          <option id="105" value="Indonesia">
+                            Indonesia 印度尼西亞, 印尼
+                          </option>
+                          <option id="106" value="Iran">Iran 伊朗</option>
+                          <option id="107" value="Iraq">Iraq 伊拉克</option>
+                          <option id="108" value="Ireland">
+                            Ireland 愛爾蘭
+                          </option>
+                          <option id="109" value="Ireland, Northern">
+                            Ireland, Northern 北愛爾蘭
+                          </option>
+                          <option id="110" value="Israel">Israel 以色列</option>
+                          <option id="111" value="Italy">Italy 義大利</option>
+                          <option id="112" value="Jamaica">
+                            Jamaica 牙買加
+                          </option>
+                          <option id="113" value="Jan Mayen">
+                            Jan Mayen 揚馬延
+                          </option>
+                          <option id="114" value="Japan">Japan 日本</option>
+                          <option id="115" value="Jarvis Island">
+                            Jarvis Island 賈維斯島
+                          </option>
+                          <option id="116" value="Jersey">Jersey 澤西</option>
+                          <option id="117" value="Johnston Atoll">
+                            Johnston Atoll 強斯頓環礁
+                          </option>
+                          <option id="118" value="Jordan">Jordan 約旦</option>
+                          <option id="119" value="Juan de Nova Island">
+                            Juan de Nova Island 胡安·德諾瓦島
+                          </option>
+                          <option id="120" value="Kazakhstan">
+                            Kazakhstan 哈薩克斯坦
+                          </option>
+                          <option id="121" value="Kenya">Kenya 肯尼亞</option>
+                          <option id="122" value="Kiribati">
+                            Kiribati 基里巴斯
+                          </option>
+                          <option id="123" value="Korea, North">
+                            Korea, North 北韓
+                          </option>
+                          <option id="124" value="Korea, South">
+                            Korea, South 南韓
+                          </option>
+                          <option id="125" value="Kuwait">Kuwait 科威特</option>
+                          <option id="126" value="Kyrgyzstan">
+                            Kyrgyzstan 吉爾吉斯斯坦
+                          </option>
+                          <option id="127" value="Laos">Laos 老撾</option>
+                          <option id="128" value="Latvia">
+                            Latvia 拉脫維亞
+                          </option>
+                          <option id="129" value="Lebanon">
+                            Lebanon 黎巴嫩
+                          </option>
+                          <option id="130" value="Lesotho">
+                            Lesotho 萊索托
+                          </option>
+                          <option id="131" value="Liberia">
+                            Liberia 利比里亞
+                          </option>
+                          <option id="132" value="Libya">Libya 利比亞</option>
+                          <option id="133" value="Liechtenstein">
+                            Liechtenstein 列支敦士登
+                          </option>
+                          <option id="134" value="Lithuania">
+                            Lithuania 立陶宛
+                          </option>
+                          <option id="135" value="Luxembourg">
+                            Luxembourg 盧森堡
+                          </option>
+                          <option id="136" value="Macau">Macau 澳門</option>
+                          <option
+                            id="137"
+                            value="Macedonia, Former Yugoslav Republic of"
+                          >
+                            Macedonia, Former Yugoslav Republic of 馬其頓共和國
+                          </option>
+                          <option id="138" value="Madagascar">
+                            Madagascar 馬達加斯加
+                          </option>
+                          <option id="139" value="Malawi">Malawi 馬拉維</option>
+                          <option id="140" value="Malaysia">
+                            Malaysia 馬來西亞
+                          </option>
+                          <option id="141" value="Maldives">
+                            Maldives 馬爾代夫
+                          </option>
+                          <option id="142" value="Mali">Mali 馬里</option>
+                          <option id="143" value="Malta">Malta 馬耳他</option>
+                          <option id="144" value="Man, Isle of">
+                            Man, Isle of 曼島
+                          </option>
+                          <option id="145" value="Marshall Islands">
+                            Marshall Islands 馬紹爾群島
+                          </option>
+                          <option id="146" value="Martinique">
+                            Martinique 馬提尼克
+                          </option>
+                          <option id="147" value="Mauritania">
+                            Mauritania 毛里塔尼亞
+                          </option>
+                          <option id="148" value="Mauritius">
+                            Mauritius 毛里求斯
+                          </option>
+                          <option id="149" value="Mayotte">
+                            Mayotte 馬約特
+                          </option>
+                          <option id="150" value="Mexico">Mexico 墨西哥</option>
+                          <option
+                            id="151"
+                            value="Micronesia, Federated States of"
+                          >
+                            Micronesia, Federated States of 密克羅尼西亞聯邦
+                          </option>
+                          <option id="152" value="Midway Islands">
+                            Midway Islands 中途島
+                          </option>
+                          <option id="153" value="Moldova">
+                            Moldova 摩爾多瓦
+                          </option>
+                          <option id="154" value="Monaco">Monaco 摩納哥</option>
+                          <option id="155" value="Mongolia">
+                            Mongolia 蒙古
+                          </option>
+                          <option id="156" value="Montserrat">
+                            Montserrat 蒙特塞拉特山
+                          </option>
+                          <option id="157" value="Morocco">
+                            Morocco 摩洛哥
+                          </option>
+                          <option id="158" value="Mozambique">
+                            Mozambique 莫桑比克
+                          </option>
+                          <option id="159" value="Namibia">
+                            Namibia 納米比亞
+                          </option>
+                          <option id="160" value="Nauru">Nauru 瑙魯</option>
+                          <option id="161" value="Nepal">Nepal 尼泊爾</option>
+                          <option id="162" value="Netherlands">
+                            Netherlands 荷蘭
+                          </option>
+                          <option id="163" value="Netherlands Antilles">
+                            Netherlands Antilles 荷屬安的列斯
+                          </option>
+                          <option id="164" value="New Caledonia">
+                            New Caledonia 新喀裡多尼亞
+                          </option>
+                          <option id="165" value="New Zealand">
+                            New Zealand 新西蘭
+                          </option>
+                          <option id="166" value="Nicaragua">
+                            Nicaragua 尼加拉瓜
+                          </option>
+                          <option id="167" value="Niger">Niger 尼日爾</option>
+                          <option id="168" value="Nigeria">
+                            Nigeria 尼日利亞
+                          </option>
+                          <option id="169" value="Niue">Niue 紐埃</option>
+                          <option id="170" value="Norfolk Island">
+                            Norfolk Island 諾福克島
+                          </option>
+                          <option id="171" value="Northern Mariana Islands">
+                            Northern Mariana Islands 北馬裡亞納群島
+                          </option>
+                          <option id="172" value="Norway">Norway 挪威</option>
+                          <option id="173" value="Oman">Oman 阿曼</option>
+                          <option id="174" value="Pakistan">
+                            Pakistan 巴基斯坦
+                          </option>
+                          <option id="175" value="Palau">Palau 帕勞</option>
+                          <option id="176" value="Panama">Panama 巴拿馬</option>
+                          <option id="177" value="Papua New Guinea">
+                            Papua New Guinea 巴布亞新幾內亞
+                          </option>
+                          <option id="178" value="Paraguay">
+                            Paraguay 巴拉圭
+                          </option>
+                          <option id="179" value="Peru">Peru 秘魯</option>
+                          <option id="180" value="Philippines">
+                            Philippines 菲律賓
+                          </option>
+                          <option id="181" value="Pitcaim Islands">
+                            Pitcaim Islands 皮特肯群島
+                          </option>
+                          <option id="182" value="Poland">Poland 波蘭</option>
+                          <option id="183" value="Portugal">
+                            Portugal 葡萄牙
+                          </option>
+                          <option id="184" value="Puerto Rico">
+                            Puerto Rico 波多黎各
+                          </option>
+                          <option id="185" value="Qatar">Qatar 卡塔爾</option>
+                          <option id="186" value="Reunion">
+                            Reunion 留尼旺
+                          </option>
+                          <option id="187" value="Romainia">
+                            Romainia 羅馬尼亞
+                          </option>
+                          <option id="188" value="Russia">Russia 俄羅斯</option>
+                          <option id="189" value="Rwanda">Rwanda 盧旺達</option>
+                          <option id="190" value="Saint Helena">
+                            Saint Helena 聖赫倫那
+                          </option>
+                          <option id="191" value="Saint Kitts and Nevis">
+                            Saint Kitts and Nevis 聖基茨和尼維斯
+                          </option>
+                          <option id="192" value="Saint Lucia">
+                            Saint Lucia 聖露西亞
+                          </option>
+                          <option id="193" value="Saint Pierre and Miquelon">
+                            Saint Pierre and Miquelon 聖皮埃爾和密克隆
+                          </option>
+                          <option
+                            id="194"
+                            value="Saint Vincent and the Grenadines"
+                          >
+                            Saint Vincent and the Grenadines
+                            聖文森特和格林納丁斯
+                          </option>
+                          <option id="195" value="Samoa">Samoa 薩摩亞</option>
+                          <option id="196" value="San Marino">
+                            San Marino 聖馬力諾
+                          </option>
+                          <option id="197" value="Sao Tome and Principe">
+                            Sao Tome and Principe 聖多美和普林西比
+                          </option>
+                          <option id="198" value="Saudi Arabia">
+                            Saudi Arabia 沙特阿拉伯
+                          </option>
+                          <option id="199" value="Scotland">
+                            Scotland 蘇格蘭
+                          </option>
+                          <option id="200" value="Senegal">
+                            Senegal 塞內加爾
+                          </option>
+                          <option id="201" value="Seychelles">
+                            Seychelles 塞舌爾
+                          </option>
+                          <option id="202" value="Sierra Leone">
+                            Sierra Leone 獅子山共和國
+                          </option>
+                          <option id="203" value="Singapore">
+                            Singapore 新加坡
+                          </option>
+                          <option id="204" value="Slovakia">
+                            Slovakia 斯洛伐克
+                          </option>
+                          <option id="205" value="Slovenia">
+                            Slovenia 斯洛文尼亞
+                          </option>
+                          <option id="206" value="Solomon Islands">
+                            Solomon Islands 所羅門群島
+                          </option>
+                          <option id="207" value="Somalia">
+                            Somalia 索馬里
+                          </option>
+                          <option id="208" value="South Africa">
+                            South Africa 南非
+                          </option>
+                          <option
+                            id="209"
+                            value="South Georgia and South Sandwich Islands"
+                          >
+                            South Georgia and South Sandwich Islands
+                            南喬治亞和南桑威奇群島
+                          </option>
+                          <option id="210" value="Spain">Spain 西班牙</option>
+                          <option id="211" value="Spratly Islands">
+                            Spratly Islands 南沙群島
+                          </option>
+                          <option id="212" value="Sri Lanka">
+                            Sri Lanka 斯里蘭卡
+                          </option>
+                          <option id="213" value="Sudan">Sudan 蘇丹</option>
+                          <option id="214" value="Suriname">
+                            Suriname 蘇里南
+                          </option>
+                          <option id="215" value="Svalbard">
+                            Svalbard 斯瓦巴
+                          </option>
+                          <option id="216" value="Swaziland">
+                            Swaziland 史瓦濟蘭
+                          </option>
+                          <option id="217" value="Sweden">Sweden 瑞典</option>
+                          <option id="218" value="Switzerland">
+                            Switzerland 瑞士
+                          </option>
+                          <option id="219" value="Syria">Syria 敘利亞</option>
+                          <option id="220" value="Tajikistan">
+                            Tajikistan 塔吉克斯坦
+                          </option>
+                          <option id="221" value="Tanzania">
+                            Tanzania 坦桑尼亞
+                          </option>
+                          <option id="222" value="Thailand">
+                            Thailand 泰國
+                          </option>
+                          <option id="223" value="Tobago">Tobago 托巴哥</option>
+                          <option id="224" value="Toga">Toga 多哥</option>
+                          <option id="225" value="Tokelau">
+                            Tokelau 托克勞
+                          </option>
+                          <option id="226" value="Tonga">Tonga 湯加</option>
+                          <option id="227" value="Trinidad">
+                            Trinidad 千里達島
+                          </option>
+                          <option id="228" value="Tunisia">
+                            Tunisia 突尼斯
+                          </option>
+                          <option id="229" value="Turkey">Turkey 土耳其</option>
+                          <option id="230" value="Turkmenistan">
+                            Turkmenistan 土庫曼
+                          </option>
+                          <option id="231" value="Tuvalu">Tuvalu 吐瓦魯</option>
+                          <option id="232" value="Uganda">Uganda 烏干達</option>
+                          <option id="233" value="Ukraine">
+                            Ukraine 烏克蘭
+                          </option>
+                          <option id="234" value="United Arab Emirates">
+                            United Arab Emirates 阿拉伯聯合酋長國
+                          </option>
+                          <option id="235" value="United Kingdom">
+                            United Kingdom 英國
+                          </option>
+                          <option id="236" value="Uruguay">
+                            Uruguay 烏拉圭
+                          </option>
+                          <option id="237" value="USA">USA 美國</option>
+                          <option id="238" value="Uzbekistan">
+                            Uzbekistan 烏茲別克斯坦
+                          </option>
+                          <option id="239" value="Vanuatu">
+                            Vanuatu 瓦努阿圖
+                          </option>
+                          <option id="240" value="Venezuela">
+                            Venezuela 委內瑞拉
+                          </option>
+                          <option id="241" value="Vietnam">Vietnam 越南</option>
+                          <option id="242" value="Virgin Islands">
+                            Virgin Islands 維爾京群島
+                          </option>
+                          <option id="243" value="Wales">Wales 威爾士</option>
+                          <option id="244" value="Wallis and Futuna">
+                            Wallis and Futuna 瓦利斯和富圖納
+                          </option>
+                          <option id="245" value="West Bank">
+                            West Bank 約旦河西岸地區
+                          </option>
+                          <option id="246" value="Western Sahara">
+                            Western Sahara 西撒哈拉
+                          </option>
+                          <option id="247" value="Yemen">Yemen 葉門</option>
+                          <option id="248" value="Yugoslavia">
+                            Yugoslavia 南斯拉夫
+                          </option>
+                          <option id="249" value="Zambia">Zambia 贊比亞</option>
+                          <option id="250" value="Zimbabwe">
+                            Zimbabwe 津巴布韋
+                          </option>
+                        </select>
+                        <select
+                          name="order[billing_address_attributes][province]"
+                          class="form-control"
+                        >
+                          <option label="請選擇洲/省"></option>
+                        </select>
+                        <input
+                          name="order[billing_address_attributes][city]"
+                          class="oversea-city form-control"
+                          placeholder="城市"
+                          value=""
+                        />
+                        <input
+                          name="order[billing_address_attributes][zip]"
+                          class="form-control"
+                          placeholder="zipcode"
+                          value=""
+                        />
+                        <input
+                          type="text"
+                          class="form-control mb-2"
+                          id="inputAddress_abroad"
+                          placeholder="請填寫詳細購買人地址：路/巷/弄/樓"
+                        />
+                      </div>
+                    </div> -->
+                  </div>
+                  <div class="col-12 mt-3">
+                    <label>電子發票</label>
+                    <!-- <div>
+                    <input
+                      type="radio"
+                      id="barcode_member"
+                      class=""
+                      name="barcode"
+                      checked
+                    /><label
+                      for="barcode_member">會員載具(個人)
+                    </label>
+                  </div> -->
+                    <div>
+                      <input
+                        type="radio"
+                        id="barcode_phone"
+                        name="barcode"
+                      /><label for="barcode_phone">手機載具 </label>
+                      <div class="d-none">
+                        <div class="d-flex">
+                          <input
+                            type="text"
+                            class="form-control rounded-0"
+                            id="barcode_phone"
+                            placeholder="例：/ + 大寫英文和數字"
+                          />
+                          <span class="d-inline-block">
+                            <input
+                              type="button"
+                              class="btn btn-info text-white ms-2 rounded-0"
+                              value="確認"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </li>
+            <li class="list-group-item border-0">
+              <div class="col-12">
+                <div class="">
+                  <input
+                    type="radio"
+                    id="buy_person"
+                    class="d-inline-block"
+                    name="person"
+                    checked
+                  /><label for="buy_person" class="">同購買人 </label>
+                  <div class="d-none">
+                    <p class="mb-0 mt-2">取件人資訊</p>
+                    <div class="bg-white text-dark p-1 pb-0">
+                      <p>姓名：</p>
+                      <p>聯絡電話：</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-50">
+                  <input type="radio" id="add_person" name="person" /><label
+                    for="add_person"
+                    >新增收件人
+                  </label>
+                  <div class="p-1 pb-0 d-flex flex-column d-none">
+                    <label for="buy_name">姓名：</label>
+                    <input
+                      type="text"
+                      name="buy_name"
+                      id="buy_name"
+                      class="mb-2 form-control w-50 rounded-0"
+                    />
+                    <p>*超商取貨請使用本名，並記得攜帶身分證前往取貨</p>
+                    <label for="buy_phone">聯絡電話：</label>
+                    <input
+                      type="text"
+                      name="buy_phone"
+                      id="buy_phone"
+                      class="mb-2 form-control w-50 rounded-0"
+                    />
+                    <p>
+                      *取貨通知將以此電話聯繫 ，
+                      請勿加入任何空格或符號，使用超商取貨請務必填寫10碼手機，如：0987654321
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item border-0">
+              <div class="col-12">
+                <!-- <div>
+                  <label class="checkbox-inline" title=""
+                    ><input
+                      id="allow-customer-terms-check-box"
+                      type="checkbox"
+                      class="form-check-input"
+                    /><label for="allow-customer-terms-check-box"
+                      ><span
+                        data-translate-keys="agree-terms"
+                        data-translate-html="true"
+                        >同意</span
+                      ><a
+                        data-translate-keys="cyberbiz-terms"
+                        href="//www.cyberbiz.co/terms-of-customer"
+                        target="_blank"
+                        data-translate-html="true"
+                        >會員責任規範及個資聲明</a
+                      ></label
+                    ></label
+                  >
+                </div> -->
+                <div>
+                  <label class="checkbox-inline" title=""
+                    ><input
+                      id="allow-assure-check-box"
+                      type="checkbox"
+                      class="form-check-input"
+                    /><span for="allow-assure-check-box"
+                      >為保障彼此之權益，賣家在收到您的訂單後仍保有決定是否接受訂單及出貨與否之權利</span
+                    >
+                  </label>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="w-100 my-3">
+            <button
+              type="submit"
+              class="btn btn-primary w-100 text-white rounded-0"
+            >
+              立即結帳
+            </button>
+          </div>
+        </section>
+      </form>
+    </div>
+    <div w3-include-html="footer.html"></div>
+    <!-- 放在include HTML後面 -->
+    <script>
+      includeHTML();
+    </script>
+    <!--  -->
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v15.0"
+      nonce="2g9KeDoZ"
+    ></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      (function () {
+        "use strict";
+
+        function ctrls() {
+          var _this = this;
+
+          this.counter = 1;
+          this.els = {
+            decrement: document.querySelector(".ctrl__button--decrement"),
+            counter: {
+              container: document.querySelector(".ctrl__counter"),
+              num: document.querySelector(".ctrl__counter-num"),
+              input: document.querySelector(".ctrl__counter-input"),
+            },
+            increment: document.querySelector(".ctrl__button--increment"),
+          };
+
+          this.decrement = function () {
+            var counter = _this.getCounter();
+            var nextCounter = _this.counter > 0 ? --counter : counter;
+            _this.setCounter(nextCounter);
+          };
+
+          this.increment = function () {
+            var counter = _this.getCounter();
+            var nextCounter = counter < 9999999999 ? ++counter : counter;
+            _this.setCounter(nextCounter);
+          };
+
+          this.getCounter = function () {
+            return _this.counter;
+          };
+
+          this.setCounter = function (nextCounter) {
+            _this.counter = nextCounter;
+          };
+
+          this.debounce = function (callback) {
+            setTimeout(callback, 100);
+          };
+
+          this.render = function (hideClassName, visibleClassName) {
+            _this.els.counter.num.classList.add(hideClassName);
+
+            setTimeout(function () {
+              _this.els.counter.num.innerText = _this.getCounter();
+              _this.els.counter.input.value = _this.getCounter();
+              _this.els.counter.num.classList.add(visibleClassName);
+            }, 100);
+
+            setTimeout(function () {
+              _this.els.counter.num.classList.remove(hideClassName);
+              _this.els.counter.num.classList.remove(visibleClassName);
+            }, 1100);
+          };
+
+          this.ready = function () {
+            _this.els.decrement.addEventListener("click", function () {
+              _this.debounce(function () {
+                _this.decrement();
+                _this.render("is-decrement-hide", "is-decrement-visible");
+              });
+            });
+
+            _this.els.increment.addEventListener("click", function () {
+              _this.debounce(function () {
+                _this.increment();
+                _this.render("is-increment-hide", "is-increment-visible");
+              });
+            });
+
+            _this.els.counter.input.addEventListener("input", function (e) {
+              var parseValue = parseInt(e.target.value);
+              if (!isNaN(parseValue) && parseValue >= 0) {
+                _this.setCounter(parseValue);
+                _this.render();
+              }
+            });
+
+            _this.els.counter.input.addEventListener("focus", function (e) {
+              _this.els.counter.container.classList.add("is-input");
+            });
+
+            _this.els.counter.input.addEventListener("blur", function (e) {
+              _this.els.counter.container.classList.remove("is-input");
+              _this.render();
+            });
+          };
+        }
+
+        // init
+        var controls = new ctrls();
+        document.addEventListener("DOMContentLoaded", controls.ready);
+      })();
+    </script>
+
+    <script></script>
+    <script src="./javascripts/all.js"></script>
+  </body>
+</html>

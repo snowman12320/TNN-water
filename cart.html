@@ -239,7 +239,7 @@
                             autocomplete="on"
                             maxlength="4"
                             pattern="\d{4}"
-                            title="First four digits"
+                            title="4碼數字"
                             placeholder="XXXX"
                             required
                           />
@@ -251,7 +251,7 @@
                             autocomplete="on"
                             maxlength="4"
                             pattern="\d{4}"
-                            title="Second four digits"
+                            title="4碼數字"
                             placeholder="XXXX"
                             required
                           />
@@ -263,7 +263,7 @@
                             autocomplete="on"
                             maxlength="4"
                             pattern="\d{4}"
-                            title="Third four digits"
+                            title="4碼數字"
                             placeholder="XXXX"
                             required
                           />
@@ -275,7 +275,7 @@
                             autocomplete="on"
                             maxlength="4"
                             pattern="\d{4}"
-                            title="Fourth four digits"
+                            title="4碼數字"
                             placeholder="XXXX"
                             required
                           />
@@ -289,7 +289,7 @@
                           type="text"
                           class="form-control w-100 rounded-0"
                           pattern="\w+ \w+.*"
-                          title="Fill your first and last name"
+                          title="請填寫英文大寫姓名"
                           placeholder="英文大寫姓名"
                           required
                         />
@@ -300,7 +300,7 @@
                       <label class="control-label">有效期限</label>
                       <div class="d-flex">
                         <div class="w-100">
-                          <select class="w-100 form-select rounded-0">
+                          <select class="w-100 form-select rounded-0" required>
                             <option>01</option>
                             <option>02</option>
                             <option>03</option>
@@ -316,7 +316,7 @@
                           </select>
                         </div>
                         <div class="w-100">
-                          <select class="form-select w-100 rounded-0">
+                          <select class="form-select w-100 rounded-0" required>
                             <option>2023</option>
                             <option>2024</option>
                             <option>2025</option>
@@ -338,7 +338,7 @@
                         autocomplete="off"
                         maxlength="3"
                         pattern="\d{3}"
-                        title="Three digits at back of your card"
+                        title="信用卡背面，三碼數字"
                         placeholder="XXX"
                         required
                       />
@@ -370,7 +370,7 @@
                     type="email"
                     class="form-control mb-2 rounded-0"
                     id="inputEmail4 "
-                    placeholder="購買人姓名"
+                    placeholder="購買人姓名" required
                   />
                 </div>
                 <div class="col-md-12">
@@ -381,7 +381,7 @@
                     type="password"
                     class="form-control mb-2 rounded-0"
                     id="inputPassword4"
-                    placeholder="例：0987654321"
+                    placeholder="例：0987654321" required
                   />
                 </div>
                 <div class="col-12">
@@ -390,7 +390,7 @@
                   >
                   <div class="d-flex flex-column mb-2">
                     <div>
-                      <input
+                      <input required
                         type="radio"
                         id="address_tai"
                         class=""
@@ -407,7 +407,7 @@
                             >
                               <select
                                 name="order[billing_address_attributes][city]"
-                                class="form-control rounded-0"
+                                class="form-control rounded-0" required
                               >
                                 <option value="">縣市</option>
                                 <option value="基隆市">基隆市</option>
@@ -448,13 +448,13 @@
                                 type="text"
                                 class="form-control rounded-0"
                                 id="inputAddress"
-                                placeholder="鄉鎮市區"
+                                placeholder="鄉鎮市區" required
                               />
                               <input
                                 type="text"
                                 class="form-control mb-2 rounded-0"
                                 id="inputAddress"
-                                placeholder="請填寫詳細購買人地址：路/巷/弄/樓"
+                                placeholder="請填寫詳細購買人地址：路/巷/弄/樓" required
                               />
                             </div>
                           </div>
@@ -1161,7 +1161,7 @@
                             <input
                               type="button"
                               class="btn btn-info text-white ms-2 rounded-0"
-                              value="確認"
+                              value="確認" 
                             />
                           </span>
                         </div>
@@ -1200,7 +1200,7 @@
                       type="text"
                       name="buy_name"
                       id="buy_name"
-                      class="mb-2 form-control w-50 rounded-0"
+                      class="mb-2 form-control w-50 rounded-0" 
                     />
                     <p>*超商取貨請使用本名，並記得攜帶身分證前往取貨</p>
                     <label for="buy_phone">聯絡電話：</label>
@@ -1247,6 +1247,7 @@
                       id="allow-assure-check-box"
                       type="checkbox"
                       class="form-check-input"
+                      required
                     /><span for="allow-assure-check-box"
                       >為保障彼此之權益，賣家在收到您的訂單後仍保有決定是否接受訂單及出貨與否之權利</span
                     >

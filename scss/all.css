@@ -12663,35 +12663,110 @@ textarea.form-control-lg {
   opacity: 1;
 }
 
-.arrow_path::after {
-  content: ">";
-  color: #c488a4;
-  margin-left: 15px;
+.product_container img {
+  vertical-align: middle;
 }
 
-.flex-prev {
-  height: 58px !important;
+/* Position the image container (needed to position the left and right arrows) */
+.product_container {
+  position: relative;
+  width: 300px;
 }
 
-.flex-next {
-  height: 58px !important;
+/* Hide the images by default */
+.product_container .mySlides {
+  display: none;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 568px) {
-  .flexslider {
-    width: 300px !important;
-    height: 250px !important;
-  }
-  .slides img {
-    width: 250px !important;
-    height: 250px !important;
-  }
+/* Add a pointer when hovering over the thumbnail images */
+.product_container .cursor {
+  cursor: pointer;
 }
-table {
+
+/* Next & previous buttons */
+.product_container .prev,
+.product_container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  transition: background-color 0.5s;
+}
+
+/* Position the "next button" to the right */
+.product_container .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.product_container .prev:hover,
+.product_container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.product_container .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.product_container .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.product_container .column {
+  float: left;
+  width: 16.66%;
+  padding: 0px 0px !important;
+}
+
+/* Add a transparency effect for thumnbail images */
+.product_container .demo {
+  opacity: 0.6;
+}
+
+.product_container .active,
+.product_container .demo:hover {
+  opacity: 1;
+}
+
+.product_table {
   width: 100%;
   margin-bottom: 1em;
-  border-color: #ececec;
+  border-color: #6c757d;
   border-spacing: 0;
+}
+.product_table tr td {
+  padding: 10px 15px;
+}
+.product_table tr:nth-child(odd) {
+  background-color: #ddd;
+}
+.product_table tr:nth-child(even) {
+  background-color: #efefef;
+}
+.product_table tr td:first-child {
+  border-right: 3px solid #fff;
+  font-weight: 600;
 }
 
 * {

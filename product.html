@@ -8,6 +8,46 @@
 
     <link rel="stylesheet" href="./scss/all.css" />
   </head>
+  <style>
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .img-magnifier-container {
+      position: relative;
+      cursor: none;
+    }
+    .img-magnifier-container:hover .img-magnifier-glass {
+      display: block;
+    }
+    .img-magnifier-glass {
+      display: none;
+
+      position: absolute;
+      border: none; //1px solid #000;
+      border-radius: 50%;
+      cursor: none;
+      /*Set the size of the magnifier glass:*/
+      width: 150px;
+      height: 150px;
+    }
+  </style>
 
   <script>
     function includeHTML() {
@@ -54,33 +94,36 @@
     <main class="container" style="margin-top: 100px !important">
       <section class="row pb-5 my-5">
         <div class="col-lg-6 mt-5 d-flex justify-content-center">
-          <div class="product_container">
+          <div class="product_container ">
             <div class="loupe"></div>
 
-            <div class="mySlides" id="app">
+            <div class="mySlides fade img-magnifier-container" id="app">
               <div class="numbertext">1 / 6</div>
-              <img
+              <img class=""
               src=https://i0.wp.com/myfone.blog/wp-content/uploads/2021/06/800x567-1.jpg"
               style=" width: 100%; height: 400px; object-fit: cover;
-              object-position: center center;" />
+              object-position: center center;" id="myimage" />
             </div>
 
-            <div class="mySlides">
+            <div class="mySlides fade img-magnifier-container">
               <div class="numbertext">2 / 6</div>
               <img
+                class=""
                 src="./images/內頁圖/內頁-2.jpg"
                 style="width: 100%; height: 400px; object-fit: cover"
+                id="hisimage"
               />
             </div>
 
-            <div class="mySlides">
+            <div class="mySlides fade img-magnifier-container">
               <div class="numbertext">3 / 6</div>
               <img
                 src="./images/內頁圖/內頁-4.jpg"
                 style="width: 100%; height: 400px; object-fit: cover"
+                id="herimage"
               />
             </div>
-            <div class="mySlides" id="app">
+            <div class="mySlides fade img-magnifier-container" id="app">
               <div class="numbertext">4 / 6</div>
               <img
                 src="./images/內頁圖/內頁-2.jpg"
@@ -90,9 +133,10 @@
                   object-fit: none;
                   object-position: top center;
                 "
+                id="therimage"
               />
             </div>
-            <div class="mySlides">
+            <div class="mySlides fade img-magnifier-container">
               <div class="numbertext">5 / 6</div>
               <img
                 src="./images/內頁圖/內頁-2.jpg"
@@ -102,6 +146,7 @@
                   object-fit: none;
                   object-position: top center;
                 "
+                id="thisimage"
               />
             </div>
 
@@ -109,7 +154,7 @@
             <a class="next" onclick="plusSlides(1)">❯</a> -->
 
             <div class="row mx-0">
-              <div class="column">
+              <div class="column i">
                 <img class="demo cursor"
                 src=https://i0.wp.com/myfone.blog/wp-content/uploads/2021/06/800x567-1.jpg"
                 style="width: 100%; height: 50px;object-fit: cover"
@@ -351,8 +396,89 @@
           dots[i].className = dots[i].className.replace(" active", "");
         }
         slides[slideIndex - 1].style.display = "block";
+        // 避免出現又消失
+        slides[slideIndex - 1].style.opacity = "1";
         dots[slideIndex - 1].className += " active";
       }
+    </script>
+    <!--  -->
+    <script>
+      function magnify(imgID, zoom) {
+        var img, glass, w, h, bw;
+        img = document.getElementById(imgID);
+        /*create magnifier glass:*/
+        glass = document.createElement("DIV");
+        glass.setAttribute("class", "img-magnifier-glass");
+        /*insert magnifier glass:*/
+        img.parentElement.insertBefore(glass, img);
+        /*set background properties for the magnifier glass:*/
+        glass.style.backgroundImage = "url('" + img.src + "')";
+        glass.style.backgroundRepeat = "no-repeat";
+        glass.style.backgroundSize =
+          img.width * zoom + "px " + img.height * zoom + "px";
+        bw = 3;
+        w = glass.offsetWidth / 2;
+        h = glass.offsetHeight / 2;
+        /*execute a function when someone moves the magnifier glass over the image:*/
+        glass.addEventListener("mousemove", moveMagnifier);
+        img.addEventListener("mousemove", moveMagnifier);
+        /*and also for touch screens:*/
+        glass.addEventListener("touchmove", moveMagnifier);
+        img.addEventListener("touchmove", moveMagnifier);
+        function moveMagnifier(e) {
+          var pos, x, y;
+          /*prevent any other actions that may occur when moving over the image*/
+          e.preventDefault();
+          /*get the cursor's x and y positions:*/
+          pos = getCursorPos(e);
+          x = pos.x;
+          y = pos.y;
+          /*prevent the magnifier glass from being positioned outside the image:*/
+          if (x > img.width - w / zoom) {
+            x = img.width - w / zoom;
+          }
+          if (x < w / zoom) {
+            x = w / zoom;
+          }
+          if (y > img.height - h / zoom) {
+            y = img.height - h / zoom;
+          }
+          if (y < h / zoom) {
+            y = h / zoom;
+          }
+          /*set the position of the magnifier glass:*/
+          glass.style.left = x - w + "px";
+          glass.style.top = y - h + "px";
+          /*display what the magnifier glass "sees":*/
+          glass.style.backgroundPosition =
+            "-" + (x * zoom - w + bw) + "px -" + (y * zoom - h + bw) + "px";
+        }
+        function getCursorPos(e) {
+          var a,
+            x = 0,
+            y = 0;
+          e = e || window.event;
+          /*get the x and y positions of the image:*/
+          a = img.getBoundingClientRect();
+          /*calculate the cursor's x and y coordinates, relative to the image:*/
+          x = e.pageX - a.left;
+          y = e.pageY - a.top;
+          /*consider any page scrolling:*/
+          x = x - window.pageXOffset;
+          y = y - window.pageYOffset;
+          return { x: x, y: y };
+        }
+      }
+    </script>
+    <script>
+      /* Initiate Magnify Function
+with the id of the image, and the strength of the magnifier glass:*/
+      magnify("myimage", 2);
+      magnify("hisimage", 2);
+      magnify("herimage", 2);
+      magnify("therimage", 2);
+      magnify("thisimage", 2);
+      magnify("thereimage", 2);
     </script>
     <script src="./javascripts/all.js"></script>
   </body>

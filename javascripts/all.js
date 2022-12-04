@@ -17,6 +17,7 @@ $(window).scroll(showArrow);
 //   });
 // });
 
+
 //
 Vue.component("vue-magnifier", {
   template:
